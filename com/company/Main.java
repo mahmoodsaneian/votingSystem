@@ -81,12 +81,14 @@ public class Main {
                     break;
                 case 5:
                     index = scanner.nextInt();
-                    votingSystem.getResult(index);
+                    Voting voting = votingSystem.findVoting(index);
+                    ShowResult showResult = new ShowResult(voting.getpoll());
+                    showResult.showResult();
                     break;
                 case 6:
                     System.out.println("enter the index of voting that want see voters");
                     index = scanner.nextInt();
-                    Voting voting = votingSystem.findVoting(index);
+                    voting = votingSystem.findVoting(index);
                     voting.getVoters();
                     break;
                 case 7:

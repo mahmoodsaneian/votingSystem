@@ -148,4 +148,8 @@ public class Voting {
         voters.add(person);
         return true;
     }
+
+    public HashMap<String, HashSet<Vote>> getpoll(){
+        return polls;
+    }
 }
